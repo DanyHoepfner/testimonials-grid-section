@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 0;
+}
+
+:root {
+  --ds-black: #121212;
+  --ds-dark-blue: #19202d;
+  --ds-grey-100: #e7eaee;
+  --ds-grey-200: #cfcfcf;
+  --ds-grey-400: #676d7e;
+  --ds-grey-500: #48556a;
+  --ds-purple-50: #ede4ff;
+  --ds-purple-300: #a775f1;
+  --ds-purple-500: #733fc8;
+  --ds-bg-color: #f6f5f6;
+}
+html {
+  /* Root font size -- 1rem */
+  font-size: 13px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+/* ------------------------------------------------------ */
+
+body {
+  background-color: var(--ds-bg-color);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  padding: clamp(2.69rem, 0.857rem + 6.36vw, 4.62rem);
+  max-width: 1114px;
+}
+
+ul {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "dc"
+    "jw"
+    "jh"
+    "pa"
+    "kw";
+  gap: 32px;
+}
+
+li {
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+}
+.cs-daniel-clifford {
+  background-color: var(--ds-purple-500);
+  grid-area: dc;
+}
+.cs-jonathan-walters {
+  background-color: var(--ds-grey-500);
+  grid-area: jw;
+}
+.cs-jeanette-harmon {
+  background-color: white;
+  grid-area: jh;
+}
+.cs-patrick-abrams {
+  background-color: var(--ds-dark-blue);
+  grid-area: pa;
+}
+.cs-kira-whittle {
+  background-color: white;
+  grid-area: kw;
+}
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.customer-ctr {
+  display: flex;
+  gap: 17px;
+  align-items: center;
+}
+
+.customer-name-ctr {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.customer-ctr img {
+  width: 28px;
+  border-radius: 100%;
+}
+
+.text-preset-1 {
+  font-size: 1.54rem;
+  line-height: 120%;
+  font-weight: 600;
+}
+.text-preset-2 {
+  font-size: 1rem;
+  line-height: 110%;
+  font-weight: 500;
+}
+.text-preset-3 {
+  font-size: 1rem;
+  line-height: 140%;
+  font-weight: 500;
+}
+.text-preset-4 {
+  font-size: 0.92rem;
+  line-height: 110%;
+  font-weight: 500;
+}
+.text-white {
+  color: white;
+}
+.text-purple50 {
+  color: var(--ds-purple-50);
+}
+.text-grey200 {
+  color: var(--ds-grey-200);
+}
+.text-grey100 {
+  color: var(--ds-grey-100);
+}
+.text-grey1500 {
+  color: var(--ds-grey-500);
+}
+.text-grey400 {
+  color: var(--ds-grey-400);
+}
+
+@media (min-width: 768px) {
+  .cs-daniel-clifford {
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position-x: 75%;
+  }
+
+  ul {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "dc dc"
+      "jw jh"
+      "pa pa"
+      "kw kw";
+  }
+}
+
+@media (min-width: 1440px) {
+  ul {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "dc dc jw kw"
+      "jh pa pa kw";
+  }
+  body {
+    align-items: center;
+  }
+}

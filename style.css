@@ -29,17 +29,16 @@ body {
   background-color: var(--ds-bg-color);
   display: flex;
   justify-content: center;
-  border: 1px solid black;
   min-height: 100vh;
 }
 
 main {
   padding: clamp(2.69rem, 0.857rem + 6.36vw, 4.62rem);
-  max-width: 1114px;
 }
 
 ul {
   list-style-type: none;
+  max-width: 1114px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
